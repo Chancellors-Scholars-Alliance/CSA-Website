@@ -179,7 +179,7 @@ html {
   border-radius: 50%;
   height: 5.5vw;
   width: 5.5vw;
-  object-position: center;
+  /* object-fit: scale-down; */
 }
 
 /* .main-img-pres {
