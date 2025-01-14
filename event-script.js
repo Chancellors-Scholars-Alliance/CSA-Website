@@ -1,11 +1,11 @@
 // Converts Google Drive link to a direct image link
 function formatDriveLink(url) {
     const fileIdMatch = url.match(/(?:id=|\/d\/|file\/d\/)([a-zA-Z0-9_-]+)/);
-    return fileIdMatch ? `https://drive.google.com/uc?export=view&id=${fileIdMatch[1]}` : url;
+    return fileIdMatch ? `https://drive.google.com/thumbnail?id=${fileIdMatch[1]}` : url; // The major difference: /thumbnail?id=...
 }
 
-// Fetching data from Google Sheets and formatting image links
-const sheetURL = 'https://script.google.com/macros/s/AKfycbzPrAmB9cLO5OTcXqTWiVgDVZGXtAPs9pHxi3bExJ76_l5fCjohuX0jkaLiM9kIbBQDFA/exec';
+// Fetching data from Google Sheets Apps Script and formatting image links
+const sheetURL = 'https://script.google.com/macros/s/AKfycbx_1MtpoMrcO-Jrtq3QF85dVhy6F2VqyXGRsGjF4ccjae8jpAZ3i1ijRrUB0oQ4VL4apw/exec';
 
 async function fetchEventData() {
     try {
@@ -29,7 +29,7 @@ function displayEvents(events) {
 
     events.forEach(event => {
         const card = document.createElement('div');
-        card.className = 'event-card';
+        card.className = 'flex-item event-item';
 
         const img = document.createElement('img');
         img.src = event.imageUrl;
