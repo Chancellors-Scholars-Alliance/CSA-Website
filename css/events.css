@@ -18,7 +18,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
-.event-item {
+.event-container {
     padding: 1.5rem;
     height: 600px;
     display: flex;
@@ -28,12 +28,7 @@
     overflow: hidden;
 }
 
-.event-item img {
+.event-container img {
     height: 500px;
     width: auto;
 }
-/* @media (max-width: 1400px) {
-    .flex-container {
-        flex-wrap: wrap;
-    }
-} */
