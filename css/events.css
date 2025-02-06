@@ -6,7 +6,7 @@
     padding-right: 10rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 2rem 2rem;
+    gap: 0rem 5rem;
     justify-items: center;
     align-items: center;
 
@@ -14,8 +14,8 @@
 
 .flex-item {
     width: 100%;
-    border-radius: 1.5rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
 .event-item {
@@ -28,9 +28,9 @@
     overflow: hidden;
 }
 
-.event-item > img {
-    width: 100%;
-    height: auto;
+.event-item img {
+    height: 500px;
+    width: auto;
 }
 /* @media (max-width: 1400px) {
     .flex-container {
