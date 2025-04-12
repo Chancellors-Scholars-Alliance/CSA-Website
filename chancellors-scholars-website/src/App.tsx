@@ -9,8 +9,7 @@ import '../src/css/site-specific.css'
 
 // Component import
 import Navbar from '../src/components/Navbar';
-
-// 
+import Footer from '../src/components/Footer';
 import { Outlet } from "react-router-dom";
 
 
@@ -23,6 +22,10 @@ function App() {
 
       <div>
         <Outlet />
+      </div>
+      
+      <div>
+        <Footer />
       </div>
     </>
   )

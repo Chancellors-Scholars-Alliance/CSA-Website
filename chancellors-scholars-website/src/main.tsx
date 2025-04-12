@@ -10,6 +10,15 @@ import {
   RouteObject,
 } from "react-router-dom";
 
+// Views (Pages) 
+import Homepage from './views/Homepage.tsx';
+import Events from './views/Events.tsx';
+import About from './views/About.tsx';
+import CSJournals from './views/CSJournals.tsx';
+import Board from './views/Board.tsx';
+import PeerMentor from './views/PeerMentor.tsx';
+import Contact from './views/Contact.tsx';
+import Spotlight from './views/Spotlight.tsx';
 
 // Routing
 const routes: RouteObject[] = [
