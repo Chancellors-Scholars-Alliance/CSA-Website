@@ -1,3 +1,5 @@
+import {NavLink} from "react-router-dom";
+
 function Footer() {
     return (
         <>
@@ -6,18 +8,20 @@ function Footer() {
                 <div className="container">
                 <div className="row">
                     <div className="logo col-sm-4">
-                    <img className="lazy" alt="csa logo" data-original="img/csa-logo.jpg" src="" />
+                    <img className="lazy" alt="csa logo" data-original="img/csa-logo.jpg" />
                     </div>
             
                     <div className="site-map col-sm-4">
                     <h4>Site</h4>
                     <div className="site-links">
-                        <div><a href="index.html">Home</a></div>
-                        <div><a href="events.html">Events</a></div>
-                        <div><a href="about.html">About</a></div>
-                        <div><a href="journals.html">CS Journals</a></div>
-                        <div><a href="meettheboard.html">Meet the Board</a></div>
-                        <div><a href="contact.html">Contact</a></div>
+                        <div><NavLink to="/">Home</NavLink></div>
+                        <div><NavLink to="/events">Events</NavLink></div>
+                        <div><NavLink to="/about">About</NavLink></div>
+                        <div><NavLink to="/journals">CS Journals</NavLink></div>
+                        <div><NavLink to="/meet-the-board">Meet the Board</NavLink></div>
+                        <div><NavLink to="/peer-mentoring"> Peer Mentoring </NavLink></div>
+                        <div><NavLink to="/spotlight"> Spotlight </NavLink></div>
+                        <div><NavLink to="/contact">Contact</NavLink></div>
                     </div>
                     </div>
             

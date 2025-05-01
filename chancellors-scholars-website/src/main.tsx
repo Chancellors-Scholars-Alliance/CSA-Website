@@ -62,11 +62,11 @@ const routes: RouteObject[] = [
     ],
   },
   {
-    path: "/CS-journals",
+    path: "/journals",
     element: <App />,
     children: [
       {
-        path: "/CS-journals",
+        path: "/journals",
         element: <CSJournals />
       },
     ],
@@ -120,5 +120,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
+  </StrictMode>
 )

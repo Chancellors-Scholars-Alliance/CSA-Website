@@ -13,20 +13,20 @@ function Navbar() {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
                 </button>
-                <a className="navbar-brand"><NavLink to="/">Chancellor's Scholars Alliance</NavLink></a>
+                <NavLink className="navbar-brand" to="/">Chancellor's Scholars Alliance</NavLink>
             </div>
 
             {/*Collect the nav links, forms, and other content for toggling */}
             <div className="collapse navbar-collapse" id="csa-top-nav">
                 <ul className="nav navbar-nav navbar-right">
-                <li><a><NavLink to="/">Home</NavLink></a></li>
-                <li><a><NavLink to="/events">Events</NavLink></a></li>
-                <li><a><NavLink to="/about">About</NavLink></a></li>
-                <li><a><NavLink to="/CS-journals">CS Journals</NavLink></a></li>
-                <li><a><NavLink to="/meet-the-board">Meet the Board</NavLink></a></li>
-                <li><a><NavLink to="/peer-mentoring"> Peer Mentoring </NavLink></a></li>
-                <li><a><NavLink to="/spotlight"> Spotlight </NavLink></a></li>
-                <li><a><NavLink to="/contact">Contact</NavLink></a></li>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/events">Events</NavLink></li>
+                <li><NavLink to="/about">About</NavLink></li>
+                <li><NavLink to="/journals">CS Journals</NavLink></li>
+                <li><NavLink to="/meet-the-board">Meet the Board</NavLink></li>
+                <li><NavLink to="/peer-mentoring"> Peer Mentoring </NavLink></li>
+                <li><NavLink to="/spotlight"> Spotlight </NavLink></li>
+                <li><NavLink to="/contact">Contact</NavLink></li>
                 </ul>
             </div>{/*/.navbar-collapse */}
           </div>{/*/.container-fluid */}

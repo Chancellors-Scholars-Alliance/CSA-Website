@@ -1,3 +1,16 @@
+// Utilize Vite.js glob bundling/hashing to import headshots
+const images = import.meta.glob<{default: string}>(
+    '../img/board/2024-2025/*.{jpg,jpeg,JPG,png}', // Specify the path to headshots and add all relevant file extensions
+    { eager: true }
+  );
+
+const boardHeadshots = Object.fromEntries(
+    Object.entries(images).map(([path, module]) => {
+        const fileName = path.split('/').pop();
+        return [fileName, module.default];
+    })
+);
+
 function Board() {
     return(
         <div>
@@ -13,7 +26,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Keene Cheung.JPG"
+                        src={boardHeadshots['Keene Cheung.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Keene Cheung - President</h4>
@@ -37,7 +51,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Kristilynn Effie.jpg"
+                        src={boardHeadshots['Kristilynn Effie.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Kristilynn Effie - Vice President</h4>
@@ -62,7 +77,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Aryanna Ileto.jpeg"
+                        src={boardHeadshots['Aryanna Ileto.jpeg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Aryanna Ileto - Secretary</h4>
@@ -82,7 +98,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Grace Carter.jpg"
+                        src={boardHeadshots['Grace Carter.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Grace Carter - Treasurer</h4>
@@ -102,7 +119,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Sirajam Munira.jpg"
+                        src={boardHeadshots['Sirajam Munira.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Sirajam Munira - Treasurer</h4>
@@ -122,7 +140,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Emily Park.JPG"
+                        src={boardHeadshots['Emily Park.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Emily Park - Peer Mentor Chair</h4>
@@ -144,7 +163,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Jervic Aquino.jpg"
+                        src={boardHeadshots['Jervic Aquino.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Jervic Aquino - Peer Mentor Chair</h4>
@@ -164,7 +184,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Reynelle Aricheta.jpeg"
+                        src={boardHeadshots['Reynelle Aricheta.jpeg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Reynelle Leila Aricheta - Social Chair</h4>
@@ -185,7 +206,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Andrew Doan.jpg"
+                        src={boardHeadshots['Andrew Doan.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Andrew Doan - Social Chair</h4>
@@ -205,7 +227,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Desiree Menjivar.jpg"
+                        src={boardHeadshots['Desiree Menjivar.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Desiree Menjivar - Volunteer Chair</h4>
@@ -225,7 +248,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Annie Tran.jpeg"
+                        src={boardHeadshots['Annie Tran.jpeg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Annie Tran - Volunteer Chair</h4>
@@ -244,7 +268,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Carlos Gomez.jpg"
+                        src={boardHeadshots['Carlos Gomez.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Carlos Gomez - Webmaster</h4>
@@ -263,7 +288,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Foster Dang.jpg"
+                        src={boardHeadshots['Foster Dang.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Foster Dang - Webmaster</h4>
@@ -286,7 +312,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Phuong Nguyen.jpeg"
+                        src={boardHeadshots['Phuong Nguyen.jpeg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Phuong Nguyen - Publicity Chair</h4>
@@ -305,7 +332,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Maria Habashy.jpeg"
+                        src={boardHeadshots['Maria Habashy.jpeg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Maria Habashy - Publicity Chair</h4>
@@ -332,7 +360,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Felicia Gallardo.jpeg"
+                        src={boardHeadshots['Felicia Gallardo.jpeg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Felicia Gallardo - Director-At-Large</h4>
@@ -352,7 +381,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Annie Nguyen.jpeg"
+                        src={boardHeadshots['Annie Nguyen.jpeg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Annie Nguyen - Director-At-Large</h4>
@@ -372,7 +402,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Kaitlyn Tan.jpeg"
+                        src={boardHeadshots['Kaitlyn Tan.jpeg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Kaitlyn Tan - Director-At-Large</h4>
@@ -393,7 +424,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Leyna Thai.jpeg"
+                        src={boardHeadshots['Leyna Thai.jpeg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Leyna Thai - Freshman Ambassador</h4>
@@ -412,7 +444,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Leo Nunez.png"
+                        src={boardHeadshots['Leo Nunez.png']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Leo Nunez - Freshman Ambassador</h4>
@@ -432,7 +465,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Alondra Gutierrez.jpg"
+                        src={boardHeadshots['Alondra Gutierrez.jpg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Alondra Gutierrez - Board Intern</h4>
@@ -452,7 +486,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Jenni Cruz.jpeg"
+                        src={boardHeadshots['Jenni Cruz.jpeg']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Jenni Cruz - Board Intern</h4>
@@ -470,7 +505,8 @@ function Board() {
                         <img
                         alt="board picture"
                         className="lazy"
-                        data-original="img/board/2024-2025/Berleen Grewal.png"
+                        src={boardHeadshots['Berleen Grewal.png']}
+                        loading="lazy"
                         />
                     </div>
                     <h4>Berleen Grewal - Board Intern</h4>
@@ -490,7 +526,8 @@ function Board() {
                             <img
                             alt="board picture"
                             className="lazy"
-                            data-original="img/board/2024-2025/Mikey Nguyen.png"
+                            src={boardHeadshots['Mikey Nguyen.png']}
+                            loading="lazy"
                             />
                         </div>
                         <h4>Mikey Nguyen - Board Intern</h4>
