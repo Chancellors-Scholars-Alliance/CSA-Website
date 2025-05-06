@@ -19,8 +19,9 @@ function Board() {
 
                 <div className="row">
                     <hr />
-
+                    
                     {/* President */}
+                    <div className="row">
                     <div className="col-sm-6 animated fadeInUp csa-delay-2">
                     <div className="board-image">
                         <img
@@ -68,6 +69,7 @@ function Board() {
                         this year’s Vice President of the CSA; a title I hold with great
                         pride.
                         </p>
+                    </div>
                     </div>
                     </div>
 

@@ -1,4 +1,5 @@
 import {NavLink} from "react-router-dom";
+import CSAIcon from '../img/csa-icon-no-letter.png';
 
 function Navbar() {
     return(
@@ -13,7 +14,14 @@ function Navbar() {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
                 </button>
-                <NavLink className="navbar-brand" to="/">Chancellor's Scholars Alliance</NavLink>
+                <NavLink className="navbar-brand" id="navbar-brand" to="/">
+                    <img
+                        alt="navbar home icon"
+                        width="40" height="40"
+                        src={CSAIcon}
+                        loading="eager"
+                        />
+                </NavLink>
             </div>
 
             {/*Collect the nav links, forms, and other content for toggling */}
